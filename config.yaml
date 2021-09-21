@@ -1,0 +1,11 @@
+gitUserId: JauntyInc
+gitRepoId: js-geocodes
+emitModelMethods: true
+projectVersion: 1.0.0-alpha
+homepage: https://geo.codes
+packageName: GeoCodes
+invokerPackage: GeoCodes
+gitHost: github.com
+apiTests: false
+licenseName: Apache-2.0
+usePromises: true
