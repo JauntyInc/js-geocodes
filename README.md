@@ -117,7 +117,44 @@ generate your API key, and replace `"YOUR API KEY"` above with the API
 key that you generate.
 
 If you want a fully-working example, check out the `example/` directory 
-of this repository.
+of this repository. You will need to modify `index.js` to include your
+API key, but you can run it using..
+
+```shell
+cd example
+npm run test
+```
+
+You will see the following output with your API key:
+
+```shell
+> test-js-geocodes@1.0.0 test
+> node index.js
+
+API called successfully. Returned data:  Geocoding {
+  confidence: 65,
+  dataset_citation_required: false,
+  matched_address: USAddress {
+    city: 'New York',
+    formatted: '111 8th Ave, New York, NY 10011',
+    state_code: 'NY',
+    street_address: USStreetAddress {
+      formatted: '111 8th Ave',
+      street_name: '8th',
+      number: '111',
+      type: 'Ave'
+    },
+    zip_code: ZIPCode { zip: 10011, formatted: '10011' }
+  },
+  result_dataset: 'US Census Bureau 2020 TIGER',
+  result_location: 'offset',
+  result_type: 'interpolated',
+  coordinate: GCSCoordinate {
+    latitude: 40.740752706986484,
+    longitude: -74.00192922343842
+  }
+}
+```
 
 ## Documentation for API Endpoints
 
