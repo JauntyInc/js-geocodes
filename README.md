@@ -95,22 +95,17 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```javascript
 var GeoCodes = require('geo_codes');
-
+  
 var defaultClient = GeoCodes.ApiClient.instance;
 
 // Configure API key authorization: ApiKeyHeaderAuth
 var ApiKeyHeaderAuth = defaultClient.authentications['ApiKeyHeaderAuth'];
 ApiKeyHeaderAuth.apiKey = "YOUR API KEY"
 
-///// If you'd rather use URL param authentication, delete the header
-///// lines above and uncomment the 2 lines below.
-// var ApiKeyURLAuth = defaultClient.authentications['ApiKeyURLAuth'];
-// ApiKeyURLAuth.apiKey = "YOUR API KEY"
-
 var api = new GeoCodes.AddressApi()
 var q = "111 8th Ave, New York, NY 10011";
-api.v1AddressGeocode(q, opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+api.v1AddressGeocode(q).then(function(data) {
+  console.log('API called successfully. Returned data: ', data);
 }, function(error) {
   console.error(error);
 });
@@ -118,7 +113,11 @@ api.v1AddressGeocode(q, opts).then(function(data) {
 
 This should print the returned parsed API struct. If you get an error,
 visit [http://geo.codes/account/api](http://geo.codes/account/api) to
-generate your API key.
+generate your API key, and replace `"YOUR API KEY"` above with the API
+key that you generate.
+
+If you want a fully-working example, check out the `example/` directory 
+of this repository.
 
 ## Documentation for API Endpoints
 
